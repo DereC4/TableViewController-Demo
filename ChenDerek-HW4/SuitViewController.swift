@@ -7,9 +7,10 @@
 
 import UIKit
 
-class PipViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SuitViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var pipTable: UITableView!
-    let pips = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+    let suits = ["clubs", "diamonds", "hearts", "spades"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pipTable.dataSource = self
@@ -17,20 +18,20 @@ class PipViewController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pips.count
+        return suits.count
     }
 
     // cell appearance
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
         // set "reuseIdentifier" in the storyboard for the prototype cell.
-        cell.textLabel?.text = pips[indexPath.row]
+        cell.textLabel?.text = suits[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPip = pips[indexPath.row]
-        dismiss(animated: true, completion: nil) 
+        selectedSuit = suits[indexPath.row]
+        dismiss(animated: true, completion: nil)
     }
 
     /*
