@@ -27,6 +27,7 @@ class SuitViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedSuit = suits[indexPath.row]
+        print("Suit selected: \(selectedSuit ?? "nil")")
         dismiss(animated: true, completion: nil)
     }
 

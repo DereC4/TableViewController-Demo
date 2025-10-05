@@ -42,6 +42,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func submitGuess(_ sender: Any) {
+        print("Submit button was tapped!")
+        
         if selectedPip == nil || selectedSuit == nil {
             pipResult.text = "select a pip value and suit first"
                 return
