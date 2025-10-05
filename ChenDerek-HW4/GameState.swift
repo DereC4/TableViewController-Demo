@@ -1,9 +1,6 @@
-//
-//  PipViewController.swift
-//  ChenDerek-HW4
-//
-//  Created by Derek on 10/3/25.
-//
+// Project: ChenDerek-HW4
+// EID: dyc377
+// Course: CS371L
 
 import Foundation
 

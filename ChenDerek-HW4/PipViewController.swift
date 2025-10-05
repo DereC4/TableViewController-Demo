@@ -1,9 +1,6 @@
-//
-//  PipViewController.swift
-//  ChenDerek-HW4
-//
-//  Created by Derek on 10/3/25.
-//
+// Project: ChenDerek-HW4
+// EID: dyc377
+// Course: CS371L
 
 import UIKit
 
@@ -23,7 +20,6 @@ class PipViewController: UIViewController, UITableViewDataSource, UITableViewDel
     // cell appearance
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-        // set "reuseIdentifier" in the storyboard for the prototype cell.
         cell.textLabel?.text = pips[indexPath.row]
         return cell
     }
