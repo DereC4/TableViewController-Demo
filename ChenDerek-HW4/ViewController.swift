@@ -25,8 +25,15 @@ class ViewController: UIViewController {
         secretSuitIndex = Int.random(in: 0...suits.count - 1)
     }
     
+    // In ViewController.swift
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        print("--- Current values (assuming VC appeared ---")
+        
+        print("Current pip value is: \(selectedPip ?? "not set")")
+        print("Current suit value is: \(selectedSuit ?? "not set")")
 
         if let pip = selectedPip {
             pipButton.setTitle(pip, for: .normal)

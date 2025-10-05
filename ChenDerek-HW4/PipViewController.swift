@@ -26,7 +26,6 @@ class PipViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedPip = pips[indexPath.row]
-        print("Suit selected: \(selectedSuit ?? "nil")")
         dismiss(animated: true, completion: nil)
     }
 
