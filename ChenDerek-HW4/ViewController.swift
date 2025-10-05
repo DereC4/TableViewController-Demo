@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print("--- Current values (assuming VC appeared ---")
+        print("--- Current values (assuming VC appeared) ---")
         
         print("Current pip value is: \(selectedPip ?? "not set")")
         print("Current suit value is: \(selectedSuit ?? "not set")")
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func submitGuess(_ sender: Any) {
-        print("Submit button was tapped!")
+//        print("Submit button was tapped!")
         
         if selectedPip == nil || selectedSuit == nil {
             pipResult.text = "select a pip value and suit first"
